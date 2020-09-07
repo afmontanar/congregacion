@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE controladores SYSTEM "dtds/controladores.dtd">
+<controladores>
+<objeto nombre="xavatest_totprefact" clase="java.lang.String" valor="" ambito="global"/> 
+<controlador nombre="controllerConsulta">
+<hereda-de controlador="Typical"/>   <!--Hereda todas las acciones de Typical -->
+</controlador>
+    
+<controlador nombre="Totalizar">
+<hereda-de controlador="Typical"/>  
+    <accion nombre="accionSumTot" 
+    	modo="detail"
+        clase="org.adicnet.contrato.acciones.AccionSumTot" 
+        oculta="true"
+        despues-de-cada-peticion="true" >
+    </accion>    	
+</controlador>
+<controlador nombre="Totalizarpro">
+<hereda-de controlador="Typical"/>  
+    <accion nombre="preSumTotPro" 
+    	modo="detail"
+        clase="org.adicnet.contrato.acciones.PreSumTotPro" 
+        oculta="true"
+        despues-de-cada-peticion="true" >
+    </accion>    	
+</controlador>
+
+</controladores>
